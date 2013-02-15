@@ -50,7 +50,7 @@ Only the best \code{maxmodels} of each size are recorded for both the outcome an
 \references{
 Hoeting, J., D. Madigan, A. Raftery, and C. Volinsky (1999). \emph{Bayesian model averaging : A tutorial}, Statistical Science, 16, 382-417.
 
-Lefebvre, G., Atherton, J., Talbot, D. (2012). \emph{A note on the effect of the prior distribution in the Bayesian Adjustment for Confounding algorithm}, Submitted to Biometrics.
+Lefebvre, G., Atherton, J., Talbot, D. (2013). \emph{A note on the effect of the prior distribution in the Bayesian Adjustment for Confounding algorithm}, Submitted.
 
 Wang, C., Parmigiani, G., Dominici, F. (2012). \emph{Bayesian effect estimation accounting for adjustment uncertainty}, Biometrics DOI: 10.1111/j.1541-0420.2011.01731.x.
 

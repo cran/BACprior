@@ -10,7 +10,7 @@ BACprior.lm = function(Y, X, U, omega = c(1, 1.1, 1.3, 1.6, 2, 5, 10, 30, 50, 10
 	MLx = MLx/sum(MLx);
 	modelsX = resultsX$which[,-1]; #The null model is not considered
 
-	resultsYa = regsubsets(y = Y, x = cbind(X,U), force.in = 1, nbest = maxmodels, really.big = T, nvmax = ncov);
+	resultsYa = regsubsets(y = Y, x = cbind(X,U), force.in = 1, nbest = maxmodels, really.big = T, nvmax = ncov + 1);
 	resultsY = summary(resultsYa);
 	MLy = exp(-resultsY$bic/2 + mean(resultsY$bic)/2); 
 	MLy = MLy/sum(MLy);
@@ -39,21 +39,30 @@ BACprior.lm = function(Y, X, U, omega = c(1, 1.1, 1.3, 1.6, 2, 5, 10, 30, 50, 10
 	normprob = apply(unnormprob, 2, function(x){x/sum(x)});
 	normprob = normprob*(normprob>cutoff);
 	usedmodels = which(rowSums(normprob) > 0);
+	usedmodels;
 	est = coef(resultsYa, id = usedmodels);
 	VarEst = vcov(resultsYa, id = usedmodels);
 	betas = numeric(nrow(modelsY));
 	variances = numeric(nrow(modelsY));
-	k = 1;
-	for(i in usedmodels)
+	if(length(usedmodels) == 1)
 	{
-		betas[i] = est[[k]][2];
-		variances[i] = VarEst[[k]][2,2];
-		k = k + 1;
+		betas[usedmodels] = est[2];
+		variances[usedmodels] = VarEst[2,2];
+	}
+	else
+	{
+		k = 1;
+		for(i in usedmodels)
+		{
+			betas[i] = est[[k]][2];
+			variances[i] = VarEst[[k]][2,2];
+			k = k + 1;
+		}
 	}
 	beta = apply(normprob, 2, function(x){sum(x*betas)});
 	variance1 = apply(normprob, 2, function(x){sum(x*(variances + betas**2))});
 	variance2 = variance1 - beta**2;
-	results = cbind(omega, beta, variance2);
+	results = cbind(omega, beta, sqrt(variance2));
 	rownames(results) = NULL;
 	colnames(results) = c("omega", "Posterior mean", "Standard deviation");
 	if(return.best == FALSE)

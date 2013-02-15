@@ -1,6 +1,7 @@
 0796b8fda308a3eb75f4eccc5af5ea9c *BACprior-Ex.R
-9b15c48e1f11430f928091995b392dfa *DESCRIPTION
+3ffc86d6153761cbb20e22e8a5924179 *ChangeLog
+7497f6dac83fa6eb79c04aacf7cb1767 *DESCRIPTION
 df390c53434517b304ac5db487184641 *NAMESPACE
-cb9b8343118d6c40b9384c5f10038bef *R/BACprior.lm.R
-5ccdc96d413ebdb2924b036a868e9e72 *man/BACprior-package.Rd
-39dfc20a382f1fc6e625a19bee446a1f *man/BACprior.lm.Rd
+ec22211d1d1b2e90f110b02e0f993f4d *R/BACprior.lm.R
+ec5d2e89640bdc49e1f71d9265ec2eaa *man/BACprior-package.Rd
+74222353182eb9a44e573517c316a7ec *man/BACprior.lm.Rd
