@@ -1,18 +1,16 @@
 BACprior.lm = function(Y, X, U, omega = c(1, 1.1, 1.3, 1.6, 2, 5, 10, 30, 50, 100, Inf), maxmodels = 150, cutoff = 0.0001, return.best = FALSE)
 {
 	na.fail(cbind(Y, X, U));
-	require(mvtnorm);
-	require(leaps);
 	n = length(X);
 	ncov = ncol(U);
 	resultsX = summary(regsubsets(y = X, x = U, nbest = maxmodels, really.big = T, nvmax = ncov));
-	MLx = exp(-resultsX$bic/2 + mean(resultsX$bic)/2);
+	MLx = exp(-resultsX$bic/2 + min(resultsX$bic)/2);
 	MLx = MLx/sum(MLx);
 	modelsX = resultsX$which[,-1]; #The null model is not considered
 
 	resultsYa = regsubsets(y = Y, x = cbind(X,U), force.in = 1, nbest = maxmodels, really.big = T, nvmax = ncov + 1);
 	resultsY = summary(resultsYa);
-	MLy = exp(-resultsY$bic/2 + mean(resultsY$bic)/2); 
+	MLy = exp(-resultsY$bic/2 + min(resultsY$bic)/2); 
 	MLy = MLy/sum(MLy);
 	modelsY = resultsY$which[,-c(1,2)]; #The null model is not considered
 	inX_notinY = matrix(apply(modelsY, 1, function(x){apply(modelsX, 1, function(y){sum(y > x)})}), ncol = nrow(modelsX), byrow = T);

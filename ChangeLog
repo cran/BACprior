@@ -1,4 +1,10 @@
-01/22/2013 :
+2014/11/18 :
+- Added two new functions to select the omega value in an
+  attempt to minimize mean squared error: BACprior.CV and BACprior.boot.
+- The documentation was updated.
+
+
+2013/01/22 :
 - Corrected a bug in BACprior.lm which caused the full model not to be considered. 
   This bug did not return an error message, but results were wrong.
 - Corrected a bug in BACprior.lm which occured when only one model received
