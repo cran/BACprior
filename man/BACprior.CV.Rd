@@ -61,7 +61,7 @@ Lefebvre, G., Atherton, J., Talbot, D. (2014). \emph{The effect of the prior dis
 }
 
 \author{
-Denis Talbot, Geneviève Lefebvre, Juli Atherton.
+Denis Talbot, Genevieve Lefebvre, Juli Atherton.
 }
 
 

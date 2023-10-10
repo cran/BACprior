@@ -1,3 +1,7 @@
+2023/10/10:
+- Minor modifications to DESCRIPTION and documentation files to comply with new CRAN policies.
+- Slightly modified the example in BACprior.lm to shorten computing time
+
 2022/05/02:
 - Minor modifications to the NAMESPACE file to comply with new CRAN policies.
 

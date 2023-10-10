@@ -57,7 +57,7 @@ Wang, C., Parmigiani, G., Dominici, F. (2012). \emph{Bayesian effect estimation 
 %Wang, C., Parmigiani, G., Dominici, F. (2012b). \emph{Rejoinder: Bayesian effect estimation accounting for adjustment uncertainty}, Biometrics DOI: 10.1111/j.15410420.2011.01735.x.
 }
 \author{
-Denis Talbot, Geneviève Lefebvre, Juli Atherton.
+Denis Talbot, Genevieve Lefebvre, Juli Atherton.
 }
 \note{If either the null outcome model (intercept + exposure only) or the null exposure model (intercept only) have a nonnegligible weight, the approximate inferences given by this function might be poor. This occurs since the \code{regsubset} function used to find the best models of each size does not return null models.
 }
@@ -85,5 +85,5 @@ require(mvtnorm);
 	X = 0.5*U[,1] + 0.5*U[,2] + U[,4] + rnorm(n);
 	Y = U[,3] + 0.3*U[,4] + U[,5] + 0.1*X + rnorm(n);
 
-	BACprior.lm(Y, X, U);
+	BACprior.lm(Y, X, U, omega = c(1, 1.5, 2, 5, 10, 50, 100, Inf));
 	}

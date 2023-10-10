@@ -10,13 +10,13 @@ The BACprior package contains functions to help the user select the omega value 
 \tabular{ll}{
 Package: \tab BACprior\cr
 Type: \tab Package\cr
-Version: \tab 2.1\cr
-Date: \tab 2022-05-02\cr
+Version: \tab 2.1.1\cr
+Date: \tab 2023-10-10\cr
 License: \tab GPL (>=2)
 }
 }
 \author{
-Denis Talbot, Geneviève Lefebvre, Juli Atherton.
+Denis Talbot, Genevieve Lefebvre, Juli Atherton.
 
 Maintainer: Denis Talbot \email{denis.talbot@fmed.ulaval.ca}}
 \references{

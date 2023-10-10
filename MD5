@@ -1,10 +1,10 @@
-8a8f59dc8a796d7d189e3c1db8c8b93f *ChangeLog
-94f58b0b2e243c485549b9292451032c *DESCRIPTION
+4325ebc4b863beeb2fa09fa8b08e4c10 *ChangeLog
+35dcdcdb34724f6d227ba3e8ea620c80 *DESCRIPTION
 3b1fb669d9dd1db7fea7c9aaedf5f9b3 *NAMESPACE
 5ca1e0c22899b02118c78f7835133a8b *R/BACprior.CV.R
 d86c777114e068a510e096a4f3ee7962 *R/BACprior.boot.R
 ece6373c005858b28eb813537aeee14f *R/BACprior.lm.R
-fb90a8e3372c3463978871de4402dbdb *man/BACprior-package.Rd
-d7e47fa7877aaed9abb1ef0e470edf92 *man/BACprior.CV.Rd
-4aed6628872b74c1e21131af91975d2e *man/BACprior.boot.Rd
-d2a707b282e4f631e4db286963ad7d53 *man/BACprior.lm.Rd
+04d67486c63f1b72a5770933e37503a5 *man/BACprior-package.Rd
+b0eda2a89806c5623c0272951df32a83 *man/BACprior.CV.Rd
+ebed79f9137e8a04e6c491e3a8db166c *man/BACprior.boot.Rd
+294232cf4ab699aef9225efcfa0371a6 *man/BACprior.lm.Rd
